@@ -1,0 +1,50 @@
+#access {
+    background-color: $base-color;
+    padding-bottom: 70px;
+}
+
+#access .inner {
+    padding-bottom: 0%;
+}
+
+.access-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: bottom 70px;
+    height: 400px;
+    .access-address {
+        background-color: #D0C5BA;
+        width: 40%;
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        h4 {
+            font-size: 2.4rem;
+            color: #00000038;
+            padding-bottom: 30px;
+        }
+    }
+    p{
+        letter-spacing: 1.6px;
+        color: #ffffff;
+        margin-top: 24px;
+    }
+
+    .access-map {
+        width: 60%;
+    }
+}
+
+
+.address-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+
+}
+

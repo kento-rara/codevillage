@@ -1,0 +1,30 @@
+#concept {
+    background: linear-gradient($base-color 50%, $basecolor2 50%);
+}
+
+.concept-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.concept-coment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    & p {
+        width: 420px;
+        color: #FFFFFF;
+
+    }
+}
+
+.concept-coment h3 {
+        font-family: ヒラギノ明朝 Pro, W3;
+        font-size: 4rem;
+        letter-spacing: 1.6rem;
+        line-height: 1.7rem;
+        color: #FFFFFF;
+        width: 440px;
+}

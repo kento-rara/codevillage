@@ -1,0 +1,31 @@
+.first-view {
+    background-image: url(/salon-img/img1.png);
+    height: 80rem;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.first-v__wrap {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-25%);
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.catch {
+    font-size: 3.8rem;
+    font-family: ヒラギノ明朝 Pro;
+    line-height: 1.7rem;
+}
+
+.catch2 {
+    font-size: 3.8rem;
+    font-family: Zapfino, Reguler;
+    margin-top: 50px;
+    line-height: 3.3rem;
+}
