@@ -5,12 +5,27 @@
     margin: 16.4rem auto;
     margin-bottom: 0%;
     color: #70707036;
+    @include sp {
+        margin-top: 64px;
+    }
 }
 
 .footer-item {
     display: flex;
+    @include sp {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+.footer-item2 {
+    @include sp {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        
+    }
+}
 
 .footer-logo {
     color: #7070704D;
@@ -25,6 +40,9 @@ footer .inner {
     @include sp {
         display: flex;
         flex-direction: column-reverse;
+        margin-top: 60.5px;
+        position: relative;
+        padding-bottom: 20px;
         .footer-logo, .fab {
             font-size: 18px;
             line-height: 22px;

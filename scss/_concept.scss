@@ -21,6 +21,23 @@
     }
 }
 
+.sp-img {
+    height: 205px;
+    display: none;
+    @include sp {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+@media only screen and (max-width: 375px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
 
 .concept-coment {
     display: flex;
