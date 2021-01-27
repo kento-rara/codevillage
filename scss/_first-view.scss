@@ -4,9 +4,9 @@
     background-repeat: no-repeat;
     background-position: right;
     @include sp {
+        height: 600px;
         background-image: none;
         background-image: url(/salon-img/sp-img1.png);
-        background-size: cover;
         .first-v__wrap h3 {
             color:#ffff;
         }
@@ -23,12 +23,23 @@
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
+    @include sp {
+        flex-direction: column-reverse;
+        width: 288px;
+        height: 120px;
+        top: 40%;
+        left: 50%;
+    
+    }
 }
 
 .catch {
     font-size: 3.8rem;
     font-family: ヒラギノ明朝 Pro;
     line-height: 1.7rem;
+     @include sp {
+         font-size: 23px;
+     }
 }
 
 .catch2 {
@@ -36,4 +47,8 @@
     font-family: Zapfino, Reguler;
     margin-top: 50px;
     line-height: 3.3rem;
+    @include sp {
+        font-size: 28px;
+        
+    }
 }

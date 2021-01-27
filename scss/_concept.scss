@@ -1,12 +1,23 @@
 #concept {
     background: linear-gradient($base-color 50%, $basecolor2 50%);
+    @include sp {
+        margin-bottom: 60px;
+    }
+}
+
+#concept .inner {
+    @include sp {
+        padding-top: 60px;
+    }
 }
 
 .concept-img {
     display: flex;
     justify-content: space-between;
     @include sp {
-        
+        img {
+            display: none;
+        }
     }
 }
 
@@ -20,9 +31,15 @@
     & p {
         width: 420px;
         color: #FFFFFF;
-
+        @include sp {
+            width: 100%;
+            font-size: 16px;
+        }
     }
-}
+    @include sp {
+        flex-direction: column;
+    }
+    }
 
 .concept-coment h3 {
         font-family: ヒラギノ明朝 Pro, W3;
@@ -31,4 +48,11 @@
         line-height: 1.7rem;
         color: #FFFFFF;
         width: 440px;
+        @include sp {
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            padding-bottom: 18px;
+        }
 }
+
