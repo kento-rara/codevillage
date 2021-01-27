@@ -16,6 +16,7 @@ body {
     width: 100%;
 }
 
+
 .title {
     display: flex;
     align-items: center;
@@ -42,12 +43,14 @@ body {
 }
 
 
+
 ///////////
 //@mixin //
 ///////////
 
 @mixin sp {
     @media screen and(max-width: 375px) {
+
         @content;
         
     }

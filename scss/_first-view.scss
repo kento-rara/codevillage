@@ -3,6 +3,14 @@
     height: 80rem;
     background-repeat: no-repeat;
     background-position: right;
+    @include sp {
+        background-image: none;
+        background-image: url(/salon-img/sp-img1.png);
+        background-size: cover;
+        .first-v__wrap h3 {
+            color:#ffff;
+        }
+    }
 }
 
 .first-v__wrap {

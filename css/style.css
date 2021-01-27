@@ -523,6 +523,24 @@ header {
   z-index: 1;
 }
 
+@media screen and (max-width: 375px) {
+  header {
+    width: 100%;
+    padding: 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  header .header-logo {
+    font-size: 22px;
+    padding: 24px 21px;
+  }
+}
+
 nav {
   width: 35%;
 }
@@ -588,6 +606,17 @@ nav ul li:not(:first-child) {
   background-position: right;
 }
 
+@media screen and (max-width: 375px) {
+  .first-view {
+    background-image: none;
+    background-image: url(/salon-img/sp-img1.png);
+    background-size: cover;
+  }
+  .first-view .first-v__wrap h3 {
+    color: #ffff;
+  }
+}
+
 .first-v__wrap {
   position: absolute;
   top: 50%;
@@ -646,6 +675,7 @@ nav ul li:not(:first-child) {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 70px;
+  letter-spacing: 1.6px;
 }
 
 .concept-coment p {
@@ -671,6 +701,19 @@ nav ul li:not(:first-child) {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 375px) {
+  .menu-item__all {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .menu-item {
   width: 30%;
 }
@@ -688,6 +731,12 @@ nav ul li:not(:first-child) {
 
 .menu-item__img img {
   width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .menu-item {
+    width: 100%;
+  }
 }
 
 .menu-item__desc {
@@ -798,6 +847,27 @@ footer .inner {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 375px) {
+  footer .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  footer .inner .footer-logo, footer .inner .fab {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  footer .inner .footer-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer-btn {

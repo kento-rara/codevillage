@@ -23,6 +23,17 @@ footer .inner {
     margin-top: 8.4rem;
     display: flex;
     justify-content: space-between;
+    @include sp {
+        display: flex;
+        flex-direction: column-reverse;
+        .footer-logo, .fab {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .footer-item {
+            display: flex;
+        }
+    }
 }
 
 .footer-btn {

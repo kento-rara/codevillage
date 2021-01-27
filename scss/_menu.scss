@@ -1,7 +1,13 @@
 .menu-item__all {
     display: flex;
     justify-content: space-between;
-}
+    @include sp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    }
+
 
 .menu-item {
     width: 30%;
@@ -16,6 +22,9 @@
         img {
             width: 100%;
         }
+    }
+    @include sp {
+        width: 100%;
     }
 }
 
@@ -35,3 +44,4 @@
     display: flex;
     justify-content: flex-end;
 }
+
