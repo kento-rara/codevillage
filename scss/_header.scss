@@ -21,6 +21,8 @@ header {
   }
 }
 
+
+
 nav {
     width: 35%;
     @include sp {
@@ -29,17 +31,13 @@ nav {
 
   ul {
     display: flex;
+    li {
+      color: $color;
+    }
     li:not(:first-child) {
       margin-left: 20px;
-      color: $color;
   }
   }
-}
-
-
-.nav-menu li:first-child{
-  width: 80%;
-  border-bottom:1px solid $color ;
 }
 
 .header-logo {
@@ -47,7 +45,34 @@ nav {
   letter-spacing: 3.8px;
   }
 
+// ホバーした時のcss //
+.nav-menu li a {
+	text-decoration: none;
+	padding-bottom: 3px; /* 文字と下線に隙間を作る */
+  display: block;
+  
+}
+.nav-menu li a:after {
+	content: '';
+	width: 0;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid #000;
+	display: block;
+}
+.nav-menu li a:hover:after {
+	width: 100%;
+  border-bottom: 1px solid #000;
+}
 
+
+.nav-menu li:hover {
+  color: black;
+}
+
+
+
+
+// sp表示の時のハンバーガー //
   .ham {
     display: none;
     @include sp {
