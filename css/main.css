@@ -621,8 +621,11 @@ html {
   .ham span {
     display: inline-block;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: #3B4043;
+  }
+  .ham span:last-child {
+    width: 80%;
   }
 }
 
