@@ -799,6 +799,10 @@ html {
   }
 }
 
+.concept-img1 {
+  padding-right: 7px;
+}
+
 .concept-img1 img {
   width: 100%;
 }
