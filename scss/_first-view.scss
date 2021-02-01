@@ -1,54 +1,72 @@
-.first-view {
-    background-image: url(/salon-img/img1.png);
-    height: 80rem;
+#first-view {
+    height: 800px;
+    background-image: url("../salon-img/img1.png");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: contain;
     @include sp {
         height: 600px;
         background-image: none;
-        background-image: url(/salon-img/sp-img1.png);
-        .first-v__wrap h3 {
-            color:#ffff;
-        }
+        background-image: url(../salon-img/sp-img1.png);
+        background-position: left;
+        background-size: cover;
     }
-}
-
-.first-v__wrap {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%,-25%);
-    height: 30%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    text-align: center;
+    img {
+        width: 680px;
+    }
+    .inner {
+        text-align: center;
+    }
     @include sp {
-        flex-direction: column-reverse;
-        width: 288px;
-        height: 120px;
-        top: 40%;
-        left: 50%;
-    
+        position: relative;
     }
 }
 
-.catch {
-    font-size: 3.8rem;
-    font-family: ヒラギノ明朝 Pro;
-    line-height: 1.7rem;
-     @include sp {
-         font-size: 23px;
-     }
+.first-v__inner {
+    @include tab {
+        padding-top: 50%;
+    }
+    @include sp {
+        padding-top: 0px;
+        position: absolute;
+    }
 }
 
-.catch2 {
-    font-size: 3.8rem;
-    font-family: Zapfino, Reguler;
-    margin-top: 50px;
-    line-height: 3.3rem;
+
+.first-v__item {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    left: -25%;
+    @include tab {
+        position: static;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    @include sp {
+        height: 130px;
+    }
+}
+
+.first-v__text1 {
+    font-size: 38px;
+    font-family: ヒラギノ明朝 Pro;
+    line-height: 65px;
+    padding-bottom: 50px;
+    @include sp {
+        font-size: 23px;
+        letter-spacing: 2.3px;
+    }
+}
+
+.first-v__text2 {
+    font-size: 38px;
+    font-family: Zapfino ,Regular;
+    line-height: 130px;
     @include sp {
         font-size: 28px;
-        
+        letter-spacing: 2.8px;
     }
 }

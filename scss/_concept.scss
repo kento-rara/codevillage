@@ -1,75 +1,60 @@
 #concept {
     background: linear-gradient($base-color 50%, $basecolor2 50%);
-    @include sp {
-        margin-bottom: 60px;
-    }
+    color: #fff;
 }
 
-#concept .inner {
-    @include sp {
-        padding-top: 60px;
-    }
-}
 
-.concept-img {
+
+.concept-item1 {
     display: flex;
     justify-content: space-between;
-    @include sp {
-        img {
-            display: none;
-        }
-    }
+    padding-bottom: 70px;
 }
 
-.sp-img {
-    height: 205px;
-    display: none;
-    @include sp {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-.pc { display: block !important; }
-.sp { display: none !important; }
-
-@media only screen and (max-width: 375px) {
-    .pc { display: none !important; }
-    .sp { display: block !important; }
-}
-
-.concept-coment {
+.concept-item2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 70px;
-    letter-spacing: 1.6px;
-    & p {
-        width: 420px;
-        color: #FFFFFF;
-        @include sp {
-            width: 100%;
-            font-size: 16px;
-        }
-    }
-    @include sp {
+    @include tab {
         flex-direction: column;
     }
+}
+.concept-text {
+    font-size: 40px;
+    width: 50%;
+    letter-spacing: 16px;
+    display: flex;
+    justify-content: center;
+    font-family: ヒラギノ明朝 Pro;
+    @include tab {
+        padding-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
     }
-
-.concept-coment h3 {
-        font-family: ヒラギノ明朝 Pro, W3;
-        font-size: 4rem;
-        letter-spacing: 1.6rem;
-        line-height: 1.7rem;
-        color: #FFFFFF;
-        width: 440px;
-        @include sp {
-            width: 100%;
-            font-size: 18px;
-            text-align: center;
-            padding-bottom: 18px;
-        }
 }
 
+.concept-text2 {
+    font-size: 16px;
+    width: 50%;
+    letter-spacing: 1.6px;
+    height: 130px;
+    text-align: left;
+    @include sp {
+        font-size: 16px;
+    }
+}
+
+.concept-text , .concept-text2 {
+    @include tab {
+        width: 100%;
+    }
+}
+
+.concept-img1 {
+    img {
+        width: 100%;
+    }
+}
+.concept-img2 {
+    img {
+        width: 100%;
+    }
+}

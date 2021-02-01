@@ -1,60 +1,62 @@
-
 ///////////
-// 共通  //
-//////////
-$color:#707070;//文字薄い色
+//@mixin //
+///////////
+
+
+@mixin sp {
+    @media screen and(max-width: 600px) {
+        @content;
+        
+    }
+}
+
+@mixin tab {
+    @media screen and(max-width: 760px){
+            @content;
+    }
+}
+
+// 変数 //
+
+$color:#707070;
 $base-color:#A193861F;//背景色薄い色
 $basecolor2:#A1938689;//背景濃い色
 
+
+
+// 共通  //
 html {
-    font-size: 62.5%;//10px
-  scroll-behavior: smooth;
-
+        max-width: 1287px;
+        font-size: 62.5%;
+        scroll-behavior: smooth;
 }
 
-body {
-    font-size: 16px;
-    line-height: 1.2;
-    width: 100%;
-}
 
+ .inner {
+    width: 100% - 8.3% *2;//8.3%は両端の余白
+    margin: 0 auto;
+    padding-top: 260px;
+    padding-bottom: 70px;
+    @include tab {
+        padding-top: 60px;
+        width: 90%;
+    }
+}
 
 .title {
     display: flex;
     align-items: center;
+    font-size: 18px;
     color: $color;
-    margin-bottom: 11px;
-    font-size: 1.8rem;
-    line-height: 1.3rem;
-    letter-spacing: 5.4px;
+    line-height: 24px;
+    padding-bottom: 10px;
     &:after {
     display: inline-block;
     content: "";
     border-top: 1px solid $color;
     opacity: 1;
-    width: 10rem;
-    margin-left: 2rem;
+    width: 2em;
+    margin-left: 20px;
+
     }
-}
-
-.inner {
-    width: 100% - 8.3% *2;//8.3%は両端の余白
-    margin: 0 auto;
-    padding-top: 260px;
-    padding-bottom: 70px;
-}
-
-
-
-///////////
-//@mixin //
-///////////
-
-@mixin sp {
-    @media screen and(max-width: 375px) {
-
-        @content;
-        
-    }
-    
 }
