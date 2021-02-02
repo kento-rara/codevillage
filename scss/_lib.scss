@@ -4,7 +4,7 @@
 
 
 @mixin sp {
-    @media screen and(max-width: 600px) {
+    @media screen and(max-width: 640px) {
         @content;
         
     }
@@ -26,8 +26,9 @@ $basecolor2:#A1938689;//背景濃い色
 
 // 共通  //
 html {
-        max-width: 1287px;
+        max-width: 1440px;
         font-size: 62.5%;
+        font-weight: normal;
         scroll-behavior: smooth;
 }
 
@@ -41,6 +42,9 @@ html {
         padding-top: 60px;
         width: 90%;
     }
+    @include sp {
+        padding-bottom: 0%;
+    }
 }
 
 .title {
@@ -50,6 +54,9 @@ html {
     color: $color;
     line-height: 24px;
     padding-bottom: 10px;
+    @include sp {
+        padding-bottom: 50px;
+    }
     &:after {
     display: inline-block;
     content: "";

@@ -27,10 +27,11 @@
 }
 .nav-menu ul {
     display: flex;
-    line-height: 46px;    
     font-size: 1.8rem;
     color: $color;
+    padding-top: 10px;
     @include tab {
+      padding: 0%;
       line-height: 26px;
     }
     li {
@@ -47,17 +48,19 @@
 
 // ホバーした時のcss //
 .nav-menu li a {
-	text-decoration: none;
-	// padding-bottom: 1px; /* 文字と下線に隙間を作る */
+  text-decoration: none;
+  padding-bottom: 10px;
     display: block;
 }
+
 .nav-menu li a:after {
 	content: '';
 	width: 0;
 	transition: all 0.3s ease;
 	border-bottom: 1px solid #000;
-	display: block;
+  display: block;
 }
+
 .nav-menu li a:hover:after {
 	width: 100%;
   border-bottom: 1px solid #000;

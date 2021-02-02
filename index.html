@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>事前課題</title>
 </head>
+
 <body>
     <header>
         <div class="header-wrap">
@@ -21,10 +23,10 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li class=><a href="#menu">MENU</a></li>
-                    <li class=><a href="#concept">CONCEPT</a></li>
-                    <li class=><a href="#access">ACCESS</a></li>
-                    <li class=><a href="#footer-page">RESERVE</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                    <li><a href="#footer-page">RESERVE</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,15 +44,19 @@
             <h2 class="title">CONCEPT</h2>
             <div class="concept-item1">
                 <div class="concept-img1">
-                    <img src="./salon-img/img2.png" alt="pc画像１">
+                    <img class="pc-img__concept" src="./salon-img/img2.png" alt="CONCEPT-PC画像1">
+                    <img class="sp-img__concept" src="./salon-img/sp-img2.png" alt="CONCEPT-SP画像１">
                 </div>
                 <div class="concept-img2">
-                    <img src="./salon-img/img3.png" alt="">
+                    <img class="pc-img__concept" src="./salon-img/img3.png" alt="CONCEPT-PC画像2">
+                    <img class="sp-img__concept" src="./salon-img/sp-img3.png" alt="CONCEPT-SP画像2">
                 </div>
             </div>
             <div class="concept-item2">
                 <h3 class="concept-text">髪は、大事です。</h3>
-                <p class="concept-text2">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                <p class="concept-text2">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+                </p>
             </div>
 
         </div>
@@ -61,8 +67,8 @@
             <div class="menu-item__all">
                 <div class="menu-item">
                     <div class="menu-item__img">
-                        <img class="pc-img"src="./salon-img/img4.png" alt="">
-                        <img class="sp-img" src="./salon-img/spimg4.png" alt="">
+                        <img class="pc-img__menu" src="./salon-img/img4.png" alt="">
+                        <img class="sp-img__menu" src="./salon-img/spimg4.png" alt="">
                     </div>
                     <h3 class="menu-item__title">Design Cut</h3>
                     <p class="menu-item__desc">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。</p>
@@ -70,8 +76,8 @@
                 </div>
                 <div class="menu-item">
                     <div class="menu-item__img">
-                        <img class="pc-img" src="./salon-img/img5.png" alt="">
-                        <img class="sp-img" src="./salon-img/sp-img5.png" alt="">
+                        <img class="pc-img__menu" src="./salon-img/img5.png" alt="">
+                        <img class="sp-img__menu" src="./salon-img/sp-img5.png" alt="">
                         <h3 class="menu-item__title">Design Perm</h3>
                         <p class="menu-item__desc">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。
                         </p>
@@ -80,8 +86,8 @@
                 </div>
                 <div class="menu-item">
                     <div class="menu-item__img">
-                        <img class="pc-img" src="./salon-img/img6.png" alt="">
-                        <img class="sp-img" src="./salon-img/sp-img6.png" alt="">
+                        <img class="pc-img__menu" src="./salon-img/img6.png" alt="">
+                        <img class="sp-img__menu" src="./salon-img/sp-img6.png" alt="">
                         <h3 class="menu-item__title">Make Up</h3>
                         <p class="menu-item__desc">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。
                         </p>
@@ -108,29 +114,29 @@
                 </p>
             </div>
             <div class="access-item2">
-                <iframe
+                <iframe class="maps"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.837073043633!2d139.71133471555598!3d35.73022528489033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2z5rGg6KKL6aeF!5e0!3m2!1sja!2sjp!4v1611994273633!5m2!1sja!2sjp"
-                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
+                    allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
             </div>
         </div>
 
     </section>
     <footer>
         <div class="footer-border"></div>
-            <div class="footer-item">
-                <div class="ft-text__wrap">
-                    <h1 class="footer-logo">SALON BEPPU</h1>        
-                    <div class="footer-fav">
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-facebook-square"></i>
-                    </div>
-                </div>                
-                <div class="ft-btn__wrap">
-                    <button class="ft-btn"><p>RESERVE</p></button>
+        <div class="footer-item">
+            <div class="ft-text__wrap">
+                <h1 class="footer-logo">SALON BEPPU</h1>
+                <div class="footer-fav">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+            </div>
+            <div class="ft-btn__wrap">
+                <button class="ft-btn">RESERVE</button>
             </div>
         </div>
     </footer>
 </body>
-</html>
 
+</html>

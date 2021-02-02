@@ -1,6 +1,9 @@
 #concept {
     background: linear-gradient($base-color 50%, $basecolor2 50%);
-    color: #fff;
+    color: #FFFFFF;
+    @include sp {
+        background: linear-gradient($base-color 0% 30%, $basecolor2 30% 100%);
+    }
 }
 
 
@@ -9,12 +12,19 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
+    @include sp {
+        padding-bottom: 50px;
+        justify-content: space-between;
+    }
 }
 
 .concept-item2 {
     display: flex;
     @include tab {
         flex-direction: column;
+        padding-bottom: 65px;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 .concept-text {
@@ -23,11 +33,16 @@
     letter-spacing: 16px;
     display: flex;
     justify-content: center;
-    font-family: ヒラギノ明朝 Pro;
+    font-family: ヒラギノ明朝 Pro, W3;
+    align-items: center;
+    @media screen and (max-width:1060px){
+    font-size: 25px;    
+    }
     @include tab {
         padding-bottom: 10px;
         font-size: 18px;
         text-align: center;
+        letter-spacing: 7.2px;
     }
 }
 
@@ -35,10 +50,10 @@
     font-size: 16px;
     width: 50%;
     letter-spacing: 1.6px;
-    height: 130px;
-    text-align: left;
+    line-height: 2.7rem;
     @include sp {
         font-size: 16px;
+        font-family: ヒラギノ角ゴ Pro, W3;
     }
 }
 
@@ -58,4 +73,14 @@
     img {
         width: 100%;
     }
+}
+
+
+// 画像切り替え //
+.pc-img__concept { display: block !important; }
+.sp-img__concept { display: none !important; }
+
+@media  screen and (max-width: 400px) {
+    .pc-img__concept { display: none !important; }
+    .sp-img__concept { display: block !important; }
 }

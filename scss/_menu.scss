@@ -9,7 +9,7 @@
 
 .menu-item {
     width: 270px;
-    height: 550px;
+    // height: 550px;
     @include sp {
         width: 100%;
         height: auto;
@@ -25,7 +25,6 @@
 
 .menu-item__title {
     font-size: 30px;
-    text-align: center;
     padding: 35px 0;
 }
 
@@ -39,6 +38,13 @@
     }
 } 
 
+.menu-item__title, .menu-item__desc {
+    @include sp {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 .price {
     display: flex;
     justify-content: flex-end;
@@ -46,10 +52,10 @@
 }
 
 // 画像切り替え //
-.pc-img { display: block !important; }
-.sp-img { display: none !important; }
+.pc-img__menu { display: block !important; }
+.sp-img__menu { display: none !important; }
 
 @media  screen and (max-width: 760px) {
-    .pc-img { display: none !important; }
-    .sp-img { display: block !important; }
+    .pc-img__menu { display: none !important; }
+    .sp-img__menu { display: block !important; }
 }
