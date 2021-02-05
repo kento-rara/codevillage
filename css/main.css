@@ -532,7 +532,7 @@ html {
 
 @media screen and (max-width: 760px) {
   .header-wrap {
-    padding: 20px;
+    padding: 30px;
   }
 }
 
@@ -541,7 +541,7 @@ html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 24px 0;
+    padding: 20px 0;
     width: 80%;
     margin: 0 auto;
     -webkit-box-align: center;
@@ -556,6 +556,12 @@ html {
   line-height: 46px;
 }
 
+@media screen and (max-width: 830px) {
+  .header-logo {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .header-logo {
     font-size: 22px;
@@ -564,7 +570,28 @@ html {
   }
 }
 
-.nav-menu ul {
+@media screen and (max-width: 640px) {
+  #nav-menu {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    background-color: wheat;
+    -webkit-transition: .7s;
+    transition: .7s;
+    margin: 0 auto;
+    height: 200px;
+  }
+}
+
+#nav-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,29 +601,23 @@ html {
 }
 
 @media screen and (max-width: 760px) {
-  .nav-menu ul {
+  #nav-menu ul {
     padding: 0%;
     line-height: 26px;
   }
 }
 
-.nav-menu ul li {
+#nav-menu ul li {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 640px) {
-  .nav-menu {
-    display: none;
-  }
-}
-
-.nav-menu li a {
+#nav-menu li a {
   text-decoration: none;
   padding-bottom: 10px;
   display: block;
 }
 
-.nav-menu li a:after {
+#nav-menu li a:after {
   content: '';
   width: 0;
   -webkit-transition: all 0.3s ease;
@@ -605,23 +626,19 @@ html {
   display: block;
 }
 
-.nav-menu li a:hover:after {
+#nav-menu li a:hover:after {
   width: 100%;
   border-bottom: 1px solid #000;
 }
 
-.nav-menu li:hover {
+#nav-menu li:hover {
   color: black;
 }
 
-.ham {
-  display: none;
-}
-
 @media screen and (max-width: 640px) {
-  .ham {
+  .ham-btn {
+    height: 15px;
     width: 16px;
-    height: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -633,15 +650,73 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .ham span {
-    display: inline-block;
-    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .inner_line {
     height: 2px;
-    background-color: #3B4043;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
-  .ham span:last-child {
-    width: 80%;
-  }
+}
+
+.ham-btn span:last-child {
+  width: 70%;
+}
+
+.ham-btn.active #line1 {
+  -webkit-transform: rotate(45deg) translate(1px, 1px);
+          transform: rotate(45deg) translate(1px, 1px);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.ham-btn.active #line2 {
+  opacity: 0;
+}
+
+.ham-btn.active #line3 {
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.ham-menu {
+  position: absolute;
+  left: -50%;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 3;
+  width: 50%;
+  height: 100vh;
+}
+
+.ham-menu.active {
+  left: 50%;
+  opacity: 1;
+  background-color: white;
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+.ham-menu.active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.ham-menu.active li {
+  padding-bottom: 10px;
 }
 
 #first-view {
@@ -883,6 +958,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 @media screen and (max-width: 640px) {
@@ -914,6 +992,13 @@ html {
 .menu-item__title {
   font-size: 30px;
   padding: 35px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .menu-item__title {
+    text-align: start;
+  }
 }
 
 .menu-item__desc {

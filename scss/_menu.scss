@@ -1,6 +1,7 @@
 .menu-item__all {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     @include sp {
         flex-direction: column;
         width: 100%;
@@ -26,6 +27,10 @@
 .menu-item__title {
     font-size: 30px;
     padding: 35px 0;
+    text-align: center;
+    @include sp {
+        text-align: start;
+    }
 }
 
 .menu-item__desc {

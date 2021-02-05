@@ -4,11 +4,11 @@
     position: absolute;
     z-index: 1;
     @include tab {
-      padding: 20px;
+      padding: 30px;
     }
     @include sp {
         justify-content: space-between;
-        padding: 24px 0;
+        padding: 20px 0;
         width: 80%;
         margin: 0 auto;
         align-items: center;
@@ -16,16 +16,40 @@
     }
 }
 
+
+
 .header-logo {
     font-size: 38px;
     line-height: 46px;
+    @media screen and(max-width:830px){
+  font-size: 22px;      
+    }
     @include tab {
         font-size: 22px;
         line-height: 26px;
         margin: 0 auto;
     }
 }
-.nav-menu ul {
+
+#nav-menu {
+    @include sp {
+        position: absolute;
+      // 左に隠れてる状態
+        left: -100%;
+         width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: wheat;
+        transition: .7s;
+        margin: 0 auto;
+        height: 200px;
+    }
+}
+
+
+
+#nav-menu ul {
     display: flex;
     font-size: 1.8rem;
     color: $color;
@@ -39,21 +63,14 @@
     }
 }
 
-.nav-menu {
-    @include sp {
-        display: none;
-    }
-}
-
-
 // ホバーした時のcss //
-.nav-menu li a {
+#nav-menu li a {
   text-decoration: none;
   padding-bottom: 10px;
     display: block;
 }
 
-.nav-menu li a:after {
+#nav-menu li a:after {
 	content: '';
 	width: 0;
 	transition: all 0.3s ease;
@@ -61,35 +78,80 @@
   display: block;
 }
 
-.nav-menu li a:hover:after {
+#nav-menu li a:hover:after {
 	width: 100%;
   border-bottom: 1px solid #000;
 }
 
 
-.nav-menu li:hover {
+#nav-menu li:hover {
   color: black;
 }
 
 
-
-// sp表示の時のハンバーガー //
-  .ham {
-    display: none;
-    @include sp {
-      width: 16px;
-      height: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      span {
-        display: inline-block;
-        width: 100%;
-        height: 2px;
-        background-color: #3B4043;
-        &:last-child {
-          width: 80%;
-        }
-      }
-    }
+.ham-btn {
+  @include sp {
+    height: 15px;
+    width: 16px;
+    // background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+}
+
+.inner_line {
+  @include sp {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+}
+ .ham-btn span:last-child {
+   width: 70%;
+ }
+
+// クリックした後のアニメーション
+
+.ham-btn.active #line1 {
+  transform: rotate(45deg) translate(1px , 1px);
+  transform-origin: 0% 50%;
+}
+
+ .ham-btn.active #line2{
+   opacity: 0;
+ }
+
+ .ham-btn.active #line3 {
+   width: 100%;
+  transform: rotate(-45deg);
+  transform-origin: 0% 50%;
+}
+// ハンバーガーメニュー
+
+.ham-menu {
+ position:absolute;
+ left: -50%;
+ transition: 0.7s;
+ z-index: 3;
+ width: 50%;
+  height: 100vh;
+}
+
+.ham-menu.active {
+  left: 50%;
+  opacity: 1;
+  background-color: white;
+  opacity: 0.7;
+  font-size: 20px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  li {
+    padding-bottom: 10px;
+  }
+}

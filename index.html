@@ -16,12 +16,7 @@
             <div class="header-item">
                 <h1 class="header-logo">SALON BEPPU</h1>
             </div>
-            <div class="ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="nav-menu">
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#menu">MENU</a></li>
                     <li><a href="#concept">CONCEPT</a></li>
@@ -29,7 +24,24 @@
                     <li><a href="#footer-page">RESERVE</a></li>
                 </ul>
             </nav>
+            <!-- ハンバーガーボタン -->
+            <div class="ham-btn" id="ham-btn">
+                <span class="inner_line" id="line1"></span>
+                <span class="inner_line" id="line2"></span>
+                <span class="inner_line" id="line3"></span>
+            </div>
         </div>
+
+        <!-- ハンバーガーメニュー -->
+        <nav class="ham-menu" id="ham-menu">
+            <ul>
+                <li class="ham-menu__list"><a href="#menu" class="list">MENU</a></li>
+                <li class="ham-menu__list"><a href="#concept" class="list">CONCEPT</a></li>
+                <li class="ham-menu__list"><a href="#access" class="list">ACCESS</a></li>
+                <li class="ham-menu__list"><a href="#reserve" class="list">RESERVE</a></li>
+            </ul>
+        </nav>
+
     </header>
     <section id="first-view">
         <div class="inner first-v__inner">
@@ -137,6 +149,7 @@
             </div>
         </div>
     </footer>
+    <script src="./index.js"></script>
 </body>
 
 </html>
