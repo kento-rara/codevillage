@@ -639,6 +639,7 @@ html {
   .ham-btn {
     height: 15px;
     width: 16px;
+    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -720,7 +721,7 @@ html {
 }
 
 #first-view {
-  height: 800px;
+  height: 100vh;
   background-image: url("../salon-img/img1.png");
   background-repeat: no-repeat;
   background-position: right;
